@@ -1,0 +1,113 @@
+#nav_bar li:nth-child(4) {
+    background-color: white;
+}
+
+#company_info {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    float: left;
+    width: 100%;
+    background-color: lightgray;
+}
+
+#company_pic {
+    float: left;
+    height: 120px;
+    width: 150px;
+    margin:1em ;
+    border-radius: 0.5em;
+}
+
+#company_name_location {
+    float: left;
+    margin-top: 1em;
+}
+
+#company_name {
+    font-size: 2em;
+    margin-left: 1em;
+}
+
+#company_location {
+    color: gray;
+    font-size: 1.5em;
+    margin-left: 1.5em;
+}
+
+#company_information {
+    float: left;
+    margin: 0.5em;
+    border: 1px solid;
+    border-color: lightgray;
+    border-radius: 0.5em;
+}
+
+#title {
+    padding: 1em;
+    background-color: lightgray;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+}
+
+#information {
+    padding: 1em;
+}
+
+#company_text {
+    margin-top: 1em;
+}
+
+#company_map {
+   margin-top: 1em;
+   width: 100%
+}
+
+#company_contacts {
+    margin: 1em;
+    margin-top: 2em;
+    width: 100%
+}
+
+.contacts_list li {
+    margin-bottom: 1em;
+    background-color: lightgray;
+    border-top-right-radius: 0.2em;
+    border-bottom-right-radius: 0.2em;
+    height: 2.1em;
+}
+
+.contacts_list li:hover{
+    background-color: darkgray;
+}
+
+.contact_img {
+    background-color: white;
+    float:left;
+    width: 2em;
+    height: 2em;
+    border: 1px solid gray;
+    border-radius: 0.2em;
+}
+
+.contacts_list a{
+    margin-left: 1em;
+    text-decoration: none;
+    color:#000000;
+    width: 3em;
+    line-height: 2em;
+}
+
+.contacts {
+    margin: 0.5em;
+    margin-top: 1em;
+    float: left;
+    width: 40%;
+}
+
+#employes {
+    float: left;
+    margin: 1em;
+    margin-top: 1em;
+    pading: 0.5em;
+    width: 100%
+}

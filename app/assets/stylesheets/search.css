@@ -1,0 +1,67 @@
+#search_title{
+    margin-top: 2em;
+    background-color: lightgray;
+    margin-left: 1em;
+    margin-right: 1em;
+    height: 2em;
+    text-align:center;
+    line-height: 2em ;
+    font-weight: bold;
+}
+
+#search_results{
+    float:left;
+    margin-left: 1em;
+    margin-top: 1em;
+}
+
+
+.title_background{
+    background-color: lightgray;
+    padding: 0.5em;
+    display: inline-block;
+    border-top-right-radius: 0.2em ;
+    border-top-left-radius: 0.2em ;
+
+}
+
+.contact_img {
+    float:left;
+    width: 2em;
+    height: 2em;
+    border: 1px solid gray;
+    border-radius: 0.2em;
+}
+
+.current_contacts{
+    border: 1px solid lightgray;
+    float:left;
+    width: 100%;
+    margin-bottom: 1em;
+    border-bottom-left-radius: 0.2em;
+    border-bottom-right-radius: 0.2em;
+    border-top-right-radius: 0.2em;
+}
+
+.current_contacts li {
+    margin-bottom: 2em;
+    width: 10em;
+    height: 2em;
+    display: inline-block;
+}
+
+.contact_text{
+    line-height: 2em;
+    margin-left: 1em;
+}
+
+.contacts_list{
+    margin-top: 2em;
+    margin-left: 1em;
+    float:left;
+}
+
+.result_type{
+    clear:both;
+}
+

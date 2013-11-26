@@ -1,0 +1,48 @@
+#nav_bar li:nth-child(5) {
+    background-color: white;
+}
+
+.photo {
+    height: 10em;
+    widht: 12em;
+}
+
+.aluno {
+    float: left;
+    margin: 1em;
+    height: 30%;
+}
+
+#alunos {
+    text-align: center;
+    float: left;
+    width: 60%;
+    margin: 1em;
+    margin-left: 30%
+}
+
+#intro {
+    float: left;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    border-color: lightgray;
+    margin-top: 1em;
+    margin-left: 5em;
+    margin-right: 5em;
+    font-size: 1.5em;
+    text-align: justify;
+}
+
+#dudes {
+    float: left;
+    text-align: center;
+    margin: 2em;
+    width: 100%
+}
+
+#pic {
+    padding: 0;
+    border: 2px solid;
+}

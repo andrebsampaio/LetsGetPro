@@ -1,0 +1,183 @@
+#nav_bar li:nth-child(3) {
+    background-color: white;
+}
+
+#current_contacts {
+    margin:1em;
+    float: left;
+    border: 1px solid lightgray;
+    border-radius: 0.2em;
+}
+
+#contacts_list{
+    margin-top: 2em;
+    margin-left: 1em;
+    float:left;
+}
+
+#new_contacts {
+    float: left;
+    margin-left: 1em;
+    border-color: gray;
+    margin-top: 2em;
+}
+
+#request_title{
+    background-color: lightgray;
+    border-bottom-left-radius: 0.2em;
+    border-bottom-right-radius: 0.2em;
+    border-radius: 0.2em;
+    height: 2em;
+    font-weight: bold;
+    padding-left: 1em;
+    padding-right: 1em;
+    text-align: center;
+    width: 15em;
+    border: 1px solid lightgray;
+}
+
+#contacts_title{
+    clear:both;
+
+}
+
+.vcenter{
+    line-height: 2em;
+}
+
+#request_title:hover{
+     cursor: pointer;
+}
+
+#current_contacts li {
+    margin-bottom: 2em;
+    width: 10em;
+    height: 2em;
+    display: inline-block;
+}
+
+#new_contacts li {
+    margin-bottom: 2em;
+    width: 10em;
+    height: 2em;
+}
+
+.contact_img {
+    float:left;
+    width: 2em;
+    height: 2em;
+    border: 1px solid gray;
+    border-radius: 0.2em;
+    margin-right: 1em;
+}
+
+#current_contacts a{
+    text-decoration: none;
+    color:#000000;
+    width: 3em;
+}
+
+#new_contacts a{
+    text-decoration: none;
+    color:#000000;
+    width: 3em;
+}
+
+#requests {
+    float: left;
+    border-radius: 0.2em;
+}
+
+#invites{
+    display: none;
+    position: absolute;
+    border: 1px solid lightgray;
+    border-bottom-left-radius: 0.2em;
+    border-bottom-right-radius: 0.2em;
+    z-index: 2;
+    width: 17em;
+    background-color: white;
+
+}
+
+.greytext{
+    color:darkgray;
+}
+
+#requests_footer{
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+#request_list{
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1em;
+}
+
+#requests_search {
+    padding: 0.2em;
+}
+
+#search_sub{
+    float:left;
+    background-color: green;
+    border-top-right-radius: 0.2em;
+    border-bottom-right-radius: 0.2em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+#search_title{
+    float:left;
+    background-color: lightgray;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-top-left-radius: 0.2em;
+    border-bottom-left-radius: 0.2em;
+}
+
+#search_sub:hover{
+    background-color: #00a700;
+}
+
+#contact_search a{
+    text-decoration: none;
+    color: white;
+}
+#search_input{
+    float:left;
+    background-color: lightgray;
+    padding-right: 1em;
+}
+
+#contact_search{
+    float:left;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 2em;
+    border-radius: 0.2em;
+    height: 2em;
+    line-height: 2em;
+}
+
+.not_number{
+    text-decoration: underline;
+    color:green;
+}
+
+#add_friend{
+  color:green;
+  float:right;
+  background-color: lightgray;
+  padding: 0.5em;
+  border-radius: 0.2em;
+
+}
+
+#contacts_title_text{
+ float:left;
+ background-color: lightgray;
+ padding: 0.5em;
+    border-radius: 0.2em;
+}
+/*Fim de Template*/
