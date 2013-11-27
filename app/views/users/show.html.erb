@@ -6,23 +6,23 @@
 </p>
 
 <p>
-  <strong>Curriculum:</strong>
-  <%= @user.curriculum %>
-</p>
-
-<p>
   <strong>Email:</strong>
   <%= @user.email %>
 </p>
 
 <p>
-  <strong>Join date:</strong>
-  <%= @user.join_date %>
+  <strong>Password digest:</strong>
+  <%= @user.password_digest %>
 </p>
 
 <p>
-  <strong>Crypted password:</strong>
-  <%= @user.crypted_password %>
+  <strong>Password:</strong>
+  <%= @user.password %>
+</p>
+
+<p>
+  <strong>Password confirmation:</strong>
+  <%= @user.password_confirmation %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |

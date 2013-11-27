@@ -1,0 +1,24 @@
+<% provide(:title, "Sign in") %>
+<div class="row">
+  <div class="spacer200"></div>
+  <div class="span3 offset6 pagination-centered">
+    <div class="logo">lets <span class="get">GET</span>Pro</div>
+    <%= form_for(:session, url: sessions_path) do |f| %>
+
+        <%= f.label :email %>
+        <%= f.text_field :email %>
+
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+
+        <%= f.submit "Sign in", class: "btn btn-large btn-custom" %>
+    <% end %>
+    <div class="spacer15"></div>
+    <% flash.each do |key, value| %>
+        <div class="<%= flash_class(key) %>">
+          <%= value %>
+        </div>
+    <% end %>
+    <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+  </div>
+</div>

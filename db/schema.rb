@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131125101555) do
+ActiveRecord::Schema.define(version: 20131126183845) do
 
   create_table "companies", force: true do |t|
     t.string   "name"
@@ -33,12 +33,15 @@ ActiveRecord::Schema.define(version: 20131125101555) do
 
   create_table "users", force: true do |t|
     t.string   "name"
-    t.string   "curriculum"
     t.string   "email"
-    t.time     "join_date"
-    t.string   "crypted_password"
+    t.string   "password_digest"
+    t.string   "password"
+    t.string   "password_confirmation"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "remember_token"
   end
+
+  add_index "users", ["remember_token"], name: "index_users_on_remember_token"
 
 end
