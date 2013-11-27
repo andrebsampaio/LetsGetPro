@@ -9,8 +9,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= render :partial => "shared/head_nav" %>
-<%= yield %>
-
+<%= render :partial => 'shared/head_nav' %>
+<div id="page">
+  <%= render :partial => 'shared/left_side_bar' %>
+  <%= render :partial => 'shared/main_content' %>
+  <%= render :partial => 'shared/right_side_bar' %>
+</div><!-- END CONTENT AREA -->
 </body>
 </html>
