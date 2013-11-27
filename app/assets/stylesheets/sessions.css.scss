@@ -1,0 +1,60 @@
+// Place all the styles related to the Sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+  font-family: Helvetica, sans-serif;
+}
+
+.btn-custom {
+  background-color: hsl(138, 78%, 29%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#72ed97", endColorstr="#108332");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#72ed97), to(#108332));
+  background-image: -moz-linear-gradient(top, #72ed97, #108332);
+  background-image: -ms-linear-gradient(top, #72ed97, #108332);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #72ed97), color-stop(100%, #108332));
+  background-image: -webkit-linear-gradient(top, #72ed97, #108332);
+  background-image: -o-linear-gradient(top, #72ed97, #108332);
+  background-image: linear-gradient(#72ed97, #108332);
+  border-color: #108332 #108332 hsl(138, 78%, 19%);
+  color: #fff !important;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.66);
+  -webkit-font-smoothing: antialiased;
+}
+
+.logo{
+  font-size: 1.5em;
+  text-transform: capitalize;
+}
+
+.get{
+  font-size: 2em;
+  color:green;
+  font-weight: bold;
+}
+
+#login_area{
+   background: lightgray;
+   padding-top: 1em;
+   padding-bottom: 1em;
+   border-radius: 0.5em;
+
+}
+
+#session_password,#session_email{
+  height: 2em;
+}
+
+.spacer5 { height: 5px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer10 { height: 10px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer15 { height: 15px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer20 { height: 20px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer25 { height: 25px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer30 { height: 30px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer35 { height: 35px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer40 { height: 40px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer45 { height: 45px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer50 { height: 50px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer100 { height: 100px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer200 { height: 200px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
