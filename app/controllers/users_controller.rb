@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+
+  layout :resolve_layout
+
   # GET /users
   # GET /users.json
   def index
@@ -70,6 +73,15 @@ class UsersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       params.require(:user).permit(:name, :email, :password_digest, :password, :password_confirmation)
+    end
+
+    def resolve_layout
+      case action_name
+        when "new","create"
+          "signup"
+        else
+          "application"
+      end
     end
 
 end

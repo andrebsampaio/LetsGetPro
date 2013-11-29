@@ -531,6 +531,7 @@ body{
     margin: 5px;
     height: 4.2em;
     float:left;
+    width:35%;
     background-color: #f8f7f3;
     border-radius: 0.2em;
 }

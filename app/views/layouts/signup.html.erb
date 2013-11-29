@@ -1,0 +1,49 @@
+<% provide(:title, "Signup") %>
+<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+<div class="row">
+  <div class="spacer200"></div>
+  <div id="reg_area" class="span3 offset6 pagination-centered">
+    <div class="logo">lets <span class="get">GET</span>Pro</div>
+    <%= form_for(@user) do |f| %>
+        <% if @user.errors.any? %>
+            <div class="error_area">
+              <h2 class="error_title"><%= pluralize(@user.errors.count, "error") %> Errors in:</h2>
+
+              <ul>
+                <% @user.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                <% end %>
+              </ul>
+            </div>
+        <% end %>
+
+        <div class="field">
+          <%= f.label :name %>
+          <%= f.text_field :name %>
+        </div>
+        <div class="field">
+          <%= f.label :email %>
+          <%= f.text_field :email %>
+        </div>
+        <div class="field">
+          <%= f.hidden_field :password_digest %>
+        </div>
+        <div class="field">
+          <%= f.label :password %>
+          <%= f.password_field :password %>
+        </div>
+        <div class="field">
+          <%= f.label :password_confirmation %>
+          <%= f.password_field :password_confirmation %>
+        </div>
+        <div class="field">
+          <%= f.label "Current Workplace" %>
+          <%= f.text_field :workplace %>
+        </div>
+        <div class="actions">
+          <%= f.submit "Signup", class: "btn btn-large btn-custom" %>
+        </div>
+    <% end %>
+  </div>
+</div>
