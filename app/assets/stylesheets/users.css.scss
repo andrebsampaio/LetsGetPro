@@ -41,7 +41,7 @@
 
 }
 
-#user_name,#user_email,#user_password, #user_password_confirmation, #user_workplace{
+#user_name,#user_email,#user_password, #user_password_confirmation, #user_workplace,#user_img_url{
   height: 2em;
 }
 
@@ -58,6 +58,11 @@
   display: inline;
   background: none;
   padding: 0;
+}
+
+.field_with_errors label{
+  color:red;
+  font-weight: bold;
 }
 
 .spacer5 { height: 5px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }

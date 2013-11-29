@@ -3,12 +3,13 @@
     <img id="button" alt="menu icon" onclick="toggle_menu()" src="images/"/>
   </div>
   <div class="clickable_logo logo_holder">
-    <p class="logo">Lets <b class="greenIncrease">Go</b> Pro</p>
+    <p class="logo">Lets <b class="greenIncrease">GET</b> Pro</p>
   </div>
 
   <div id="user_details">
     <div id="user_pic">
-      <img id="user_photo" alt="user pic" src="<%= asset_path(current_user.img_url) %>"/>
+      <img id="user_photo" alt="user pic"
+           src="<%= asset_path(current_user.img_url) || current_user.img_url %>"/>
     </div>
     <div id="info">
       <p><span class="user_title">Name: </span><span class="user_detail"><%= current_user.name %></span></p>
@@ -24,11 +25,11 @@
 
 <div id ="nav_bar">
   <ul class="centered">
-    <li><a href="index.html" class="clickable_nav">Home</a></li>
-    <li><a href="./html/user.html" class="clickable_nav">My Profile</a></li>
+    <li><%= link_to "Home", root_url %></li>
+    <li><%= link_to "My Profile", current_user %></li>
     <li><a href="./html/contacts.html" class="clickable_nav">Contacts</a></li>
     <li><a href="./html/company.html" class="clickable_nav">Company Profile</a></li>
     <li> <a href="./html/about.html" class="clickable_nav">About Us</a></li>
-    <li><a href="./html/exit.html" class="clickable_nav">Exit</a></li>
+    <li><%= link_to "Exit", signout_path, method: "delete", class: 'clickable_nav' %></li>
   </ul>
 </div>
