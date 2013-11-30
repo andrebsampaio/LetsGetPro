@@ -1,6 +1,6 @@
 LetsGetPro::Application.routes.draw do
-  get "welcome/index"
-  resources :news
+
+  resources :posts
 
   resources :companies
 
@@ -11,12 +11,13 @@ LetsGetPro::Application.routes.draw do
   match '/signup',  to: 'users#new',            via: 'get'
   match '/signin',  to: 'sessions#new',         via: 'get'
   match '/signout', to: 'sessions#destroy',     via: 'delete'
+  match '/profile/:id',  to: 'users#show',:as => :profile, via:'get'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'welcome#index', action: 'home'
+  root 'posts#index', action: 'home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -31,7 +32,7 @@ LetsGetPro::Application.routes.draw do
   #   resources :products do
   #     member do
   #       get 'short'
-  #       post 'toggle'
+  #       posts 'toggle'
   #     end
   #
   #     collection do
@@ -55,7 +56,7 @@ LetsGetPro::Application.routes.draw do
 
   # Example resource route with concerns:
   #   concern :toggleable do
-  #     post 'toggle'
+  #     posts 'toggle'
   #   end
   #   resources :posts, concerns: :toggleable
   #   resources :photos, concerns: :toggleable

@@ -1636,7 +1636,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 				rbuggyQSA.push( ":enabled", ":disabled" );
 			}
 
-			// Opera 10-11 does not throw on post-comma invalid pseudos
+			// Opera 10-11 does not throw on posts-comma invalid pseudos
 			div.querySelectorAll("*,:x");
 			rbuggyQSA.push(",.*:");
 		});
@@ -8271,7 +8271,7 @@ jQuery.extend({
 	}
 });
 
-jQuery.each( [ "get", "post" ], function( i, method ) {
+jQuery.each( [ "get", "posts" ], function( i, method ) {
 	jQuery[ method ] = function( url, data, callback, type ) {
 		// shift arguments if data argument was omitted
 		if ( jQuery.isFunction( data ) ) {
@@ -9953,7 +9953,7 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
         target = link.attr('target'),
         csrf_token = $('meta[name=csrf-token]').attr('content'),
         csrf_param = $('meta[name=csrf-param]').attr('content'),
-        form = $('<form method="post" action="' + href + '"></form>'),
+        form = $('<form method="posts" action="' + href + '"></form>'),
         metadata_input = '<input name="_method" value="' + method + '" type="hidden" />';
 
       if (csrf_param !== undefined && csrf_token !== undefined) {

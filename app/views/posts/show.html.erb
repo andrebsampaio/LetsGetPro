@@ -1,0 +1,27 @@
+<div class="news_block">
+  <div class="news_title">
+    <h2><%= @post.title %></h2>
+  </div>
+  <div class="news_author">
+    <div class="author_img">
+      <a href="#"><img alt="user pic" src="img/AshleyPerson.jpg"/></a>
+    </div>
+    <div class="author_info">
+      <p><span class="user_title">Name: </span><span class="user_detail"><%= @post.user.name %></span></p>
+      <p><span class="user_title">Employed at: </span><span class="user_detail"><%= @post.user.workplace %></span></p>
+      <p><span class="user_title">Post Date:</span><span class="user_detail"><%= @post.created_at %></span></p>
+    </div>
+
+  </div>
+  <div class="news_content">
+    <%= @post.content %>
+  </div>
+  <div class="news_footer">
+    <div class="news_actions">
+      <a href="#">Like</a> |
+      <a href="#">Dislike</a> |
+      <a href="#">Edit</a> |
+      <a href="#">Remove</a>
+    </div>
+  </div>
+</div>

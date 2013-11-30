@@ -5,7 +5,8 @@ class ApplicationController < ActionController::Base
   include SessionsHelper
 
   before_filter :require_login
-private
+
+  private
 
   def require_login
     redirect_to signin_url and return unless signed_in?

@@ -2,13 +2,13 @@ require 'test_helper'
 
 class NewsControllerTest < ActionController::TestCase
   setup do
-    @news = news(:one)
+    @post = news(:one)
   end
 
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:news)
+    assert_not_nil assigns(:posts)
   end
 
   test "should get new" do
@@ -16,32 +16,32 @@ class NewsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create news" do
-    assert_difference('News.count') do
-      post :create, news: { author: @news.author, content: @news.content, date: @news.date, title: @news.title }
+  test "should create posts" do
+    assert_difference('Post.count') do
+      post :create, posts: { shares: @post.author, content: @post.content, date: @post.date, title: @post.title }
     end
 
-    assert_redirected_to news_path(assigns(:news))
+    assert_redirected_to news_path(assigns(:posts))
   end
 
-  test "should show news" do
-    get :show, id: @news
+  test "should show posts" do
+    get :show, id: @post
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, id: @news
+    get :edit, id: @post
     assert_response :success
   end
 
-  test "should update news" do
-    patch :update, id: @news, news: { author: @news.author, content: @news.content, date: @news.date, title: @news.title }
-    assert_redirected_to news_path(assigns(:news))
+  test "should update posts" do
+    patch :update, id: @post, posts: { shares: @post.author, content: @post.content, date: @post.date, title: @post.title }
+    assert_redirected_to news_path(assigns(:posts))
   end
 
-  test "should destroy news" do
-    assert_difference('News.count', -1) do
-      delete :destroy, id: @news
+  test "should destroy posts" do
+    assert_difference('Post.count', -1) do
+      delete :destroy, id: @post
     end
 
     assert_redirected_to news_index_path
