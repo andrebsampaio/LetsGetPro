@@ -11,3 +11,8 @@
  *= require_self
  *= require_tree .
  */
+
+.announce{
+    margin-left: 1em;
+    margin-right: 1em;
+}

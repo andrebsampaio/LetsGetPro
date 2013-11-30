@@ -1,13 +1,15 @@
 <div id="content">
   <div id="news_feed"> <!-- NEWS FEED -->
     <div id ="publish_new">
-      <a href="./html/publish.html" class="bar_title">Click me if you have news to publish</a>
+      <%= link_to 'Click me if you have news to publish', new_post_path  %>
     </div>
+    <div class="announce">
     <% flash.each do |key, value| %>
         <div class="<%= flash_class(key) %>">
           <%= value %>
         </div>
     <% end %>
+    </div>
     <%= yield %>
   </div><!-- END NEWS FEED -->
   <%= render :partial => 'shared/footer' %>

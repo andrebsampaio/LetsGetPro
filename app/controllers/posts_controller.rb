@@ -12,6 +12,10 @@ class PostsController < ApplicationController
   def show
   end
 
+  def add_share
+    self.shares +=1
+  end
+
   # GET /posts/new
   def new
     @post = Post.new
@@ -26,12 +30,13 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.user_id = current_user.id
+    @post.shares = 0
 
     if @post.save
-      flash[:success] = 'Great, you published some posts'
+      flash[:success] = 'Your "' + @post.title + '" post' +  ' was successfully published'
       redirect_to root_url
     else
-      flash[:error] = 'Something went wrong :('
+      flash[:error] = 'Something Went wrong :('
       render 'new'
     end
   end
@@ -54,10 +59,8 @@ class PostsController < ApplicationController
   # DELETE /posts/1.json
   def destroy
     @post.destroy
-    respond_to do |format|
-      format.html { redirect_to post_url }
-      format.json { head :no_content }
-    end
+    flash[:error] = 'Post successfully deleted'
+    redirect_to root_url
   end
 
   private

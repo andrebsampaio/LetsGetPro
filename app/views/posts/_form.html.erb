@@ -12,14 +12,14 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.label :title, class: 'post_label'%>
+    <%= f.text_field :title, class: 'post_title' %>
   </div>
   <div class="field">
-    <%= f.label :content %><br>
-    <%= f.text_field :content %>
+    <%= f.label :content, class: 'post_label' %>
+    <%= f.text_area :content, class: 'text_content' %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit id: "submit_post" , class: "btn btn-custom" %>
   </div>
 <% end %>

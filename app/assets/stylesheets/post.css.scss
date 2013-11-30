@@ -1,3 +1,23 @@
 // Place all the styles related to the News controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.text_content{
+  width: 98%;
+  height: 15em;
+  resize: none;
+}
+
+.form_holder{
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.post_title{
+  width:85%;
+  width: 98%;
+}
+
+.post_label{
+  font-weight: bold;
+  text-align: left;
+}
