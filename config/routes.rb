@@ -1,5 +1,9 @@
 LetsGetPro::Application.routes.draw do
 
+  resources :jobshistories
+
+  resources :curriculums
+
   resources :posts
 
   resources :companies

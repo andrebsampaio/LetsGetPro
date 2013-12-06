@@ -1,0 +1,35 @@
+<h1>Listing jobshistories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Start</th>
+      <th>End</th>
+      <th>Company</th>
+      <th>Location</th>
+      <th>Job</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @jobshistories.each do |jobshistory| %>
+      <tr>
+        <td><%= jobshistory.start %></td>
+        <td><%= jobshistory.end %></td>
+        <td><%= jobshistory.company %></td>
+        <td><%= jobshistory.location %></td>
+        <td><%= jobshistory.job %></td>
+        <td><%= link_to 'Show', jobshistory %></td>
+        <td><%= link_to 'Edit', edit_jobshistory_path(jobshistory) %></td>
+        <td><%= link_to 'Destroy', jobshistory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Jobshistory', new_jobshistory_path %>

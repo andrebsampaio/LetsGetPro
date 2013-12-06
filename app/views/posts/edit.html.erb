@@ -1,6 +1,4 @@
-<h1>Editing post</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @post %> |
-<%= link_to 'Back', root_url %>
+<%= link_to 'Show', @post, :method => :show, :remote=>true,class: "btn btn-small btn-custom" %>
+<div class="form_holder pagination-centered">
+  <%= render 'form' %>
+</div>

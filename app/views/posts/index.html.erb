@@ -1,4 +1,6 @@
-
+<div id ="publish_new">
+  <%= link_to 'Click me if you have news to publish', new_post_path  %>
+</div>
 <% @posts.reverse_each do |post| %>
     <div class="news_block">
       <div class="news_title">
@@ -6,12 +8,12 @@
       </div>
       <div class="news_author">
         <div class="author_img">
-          <a href="#"><img alt="user pic" src="img/AshleyPerson.jpg"/></a>
+          <a href="#"><img alt="user pic" src="<%= asset_path(post.user.img_url) %>"/></a>
         </div>
         <div class="author_info">
           <p><span class="user_title">Name: </span><span class="user_detail"><%= post.user.name %></span></p>
           <p><span class="user_title">Employed at: </span><span class="user_detail"><%= post.user.workplace %></span></p>
-          <p><span class="user_title">Post Date:</span><span class="user_detail"><%= post.created_at %></span></p>
+          <p><span class="user_title">Post Date: </span><span class="user_detail"><%= post.created_at %></span></p>
         </div>
 
       </div>

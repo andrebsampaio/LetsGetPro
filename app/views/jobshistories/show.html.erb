@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Start:</strong>
+  <%= @jobshistory.start %>
+</p>
+
+<p>
+  <strong>End:</strong>
+  <%= @jobshistory.end %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @jobshistory.company %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @jobshistory.location %>
+</p>
+
+<p>
+  <strong>Job:</strong>
+  <%= @jobshistory.job %>
+</p>
+
+<%= link_to 'Edit', edit_jobshistory_path(@jobshistory) %> |
+<%= link_to 'Back', jobshistories_path %>

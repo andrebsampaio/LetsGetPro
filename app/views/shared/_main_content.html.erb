@@ -1,8 +1,6 @@
 <div id="content">
   <div id="news_feed"> <!-- NEWS FEED -->
-    <div id ="publish_new">
-      <%= link_to 'Click me if you have news to publish', new_post_path  %>
-    </div>
+
     <div class="announce">
     <% flash.each do |key, value| %>
         <div class="<%= flash_class(key) %>">
