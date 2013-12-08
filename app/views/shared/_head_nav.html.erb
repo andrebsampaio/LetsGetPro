@@ -14,6 +14,7 @@
     <div id="info">
       <p><span class="user_title">Name: </span><span class="user_detail"><%= current_user.name %></span></p>
       <p><span class="user_title">Employed at: </span><span class="user_detail"><%= current_user.workplace %></span></p>
+      <%= link_to "Signout", signout_path, method: "delete", class: 'btn btn-xs btn-custom' %>
     </div>
   </div>
 
@@ -30,6 +31,5 @@
     <li><a href="./html/contacts.html" class="clickable_nav">Contacts</a></li>
     <li><a href="./html/company.html" class="clickable_nav">Company Profile</a></li>
     <li> <a href="./html/about.html" class="clickable_nav">About Us</a></li>
-    <li><%= link_to "Exit", signout_path, method: "delete", class: 'clickable_nav' %></li>
   </ul>
 </div>

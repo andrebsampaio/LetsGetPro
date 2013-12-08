@@ -3,7 +3,7 @@
 <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 <div class="row">
   <div class="spacer100"></div>
-  <div id="reg_area" class="span3 offset6 pagination-centered">
+  <div id="reg_area" class="col-md-2 col-xs-offset-5 centered">
     <div class="logo">lets <span class="get">GET</span>Pro</div>
     <%= form_for(@user) do |f| %>
         <% if @user.errors.any? %>
@@ -19,30 +19,30 @@
         <% end %>
 
         <div class="field">
-          <%= f.label :name %>
+          <%= f.label :name %><br>
           <%= f.text_field :name %>
         </div>
         <div class="field">
-          <%= f.label :email %>
+          <%= f.label :email %><br>
           <%= f.text_field :email %>
         </div>
         <div class="field">
           <%= f.hidden_field :password_digest %>
         </div>
         <div class="field">
-          <%= f.label :password %>
+          <%= f.label :password %><br>
           <%= f.password_field :password %>
         </div>
         <div class="field">
-          <%= f.label :password_confirmation %>
+          <%= f.label :password_confirmation %><br>
           <%= f.password_field :password_confirmation %>
         </div>
         <div class="field">
-          <%= f.label "Current Workplace" %>
+          <%= f.label "Current Workplace" %><br>
           <%= f.text_field :workplace %>
         </div>
         <div class="field">
-          <%= f.label "Image Url" %>
+          <%= f.label "Image Url" %><br>
           <%= f.text_field :img_url %>
         </div>
         <div class="actions">

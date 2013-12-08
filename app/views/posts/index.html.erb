@@ -23,10 +23,10 @@
       <div class="news_footer">
 
         <div class="news_actions">
-          <%= link_to 'Share ('+ post.shares.to_s + ')', post, :method => :add_share, :remote=>true,class: "btn btn-small btn-custom" %>
+          <%= link_to 'Share ('+ post.shares.to_s + ')', post, :method => :add_share, :remote=>true,class: "btn btn-sm btn-custom" %>
           <% if post.user.name == current_user.name %>
-          <%= link_to 'Edit', edit_post_path(post),class: "btn btn-small btn-custom" %>
-          <%= link_to 'Remove', post, method: :delete, data: { confirm: 'Are you sure?' },class: "btn btn-small btn-custom" %>
+          <%= link_to 'Edit', edit_post_path(post),class: "btn btn-sm btn-custom" %>
+          <%= link_to 'Remove', post, method: :delete, data: { confirm: 'Are you sure?' },class: "btn btn-sm btn-custom" %>
           <% end %>
         </div>
       </div>

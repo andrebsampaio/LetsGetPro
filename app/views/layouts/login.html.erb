@@ -1,19 +1,22 @@
 <% provide(:title, "Sign in") %>
+<%= stylesheet_link_tag "bootstrap" %>
+<%= javascript_include_tag "bootstrap", "data-turbolinks-track" => true %>
 <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
 <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+
 <%= csrf_meta_tags %>
 <div class="row">
   <div class="spacer200"></div>
-  <div id="login_area" class="span3 offset6 pagination-centered">
+  <div id="login_area" class="col-md-2 col-xs-offset-5 centered">
     <div class="logo">lets <span class="get">GET</span>Pro</div>
     <%= form_for(:session, url: sessions_path) do |f| %>
 
-        <%= f.label :email %>
+        <%= f.label :email %><br>
         <%= f.text_field :email %>
-
-        <%= f.label :password %>
+         <br>
+        <%= f.label :password %><br>
         <%= f.password_field :password %>
-
+         <br><br>
         <%= f.submit "Sign in", class: "btn btn-large btn-custom" %>
     <% end %>
     <div class="spacer15"></div>

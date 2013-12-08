@@ -622,9 +622,6 @@ body{
     background-color: #e1e0dc;
 }
 
-#nav_bar li:last-child{
-    float:right;
-}
 
 #nav_bar li:hover {
     padding: 0.4em;
