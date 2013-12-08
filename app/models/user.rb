@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
             uniqueness: { case_sensitive: false }
   has_secure_password
   validates :password, length: { minimum: 6 }
+  after_create :create_default_curriculum
 
 
 
@@ -31,5 +32,9 @@ class User < ActiveRecord::Base
     def create_remember_token
       self.remember_token = User.encrypt(User.new_remember_token)
     end
+
+  def create_default_curriculum
+    self.create_curriculum
+  end
 
 end
