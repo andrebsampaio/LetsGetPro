@@ -8,14 +8,13 @@
 }
 
 #user_info {
-    height: 7em;
+    height: 7.5em;
     padding-top: 0.8em;
     background-color: lightgray;
     border-top-left-radius: 0.2em;
     border-top-right-radius: 0.2em;
     margin-left:1em;
     margin-right: 1em;
-    margin-top:2em;
 }
 
 #user_photo_holder{
@@ -51,8 +50,14 @@
 #contacts {
     margin-right: 1em;
     margin-left: 1em;
-    float:left;
     margin-bottom: 1em;
+    border: 1px solid lightgray;
+}
+
+.contact_box{
+    border: 1px solid lightgray;
+    display: inline-block;
+    padding: 0.5em;
 }
 
 .curriculum_author_title{
@@ -88,22 +93,40 @@
     margin-left: 1em;
 }
 
+.contact_notices{
+    background-color: lightgray;
+    padding-left: 1em;
+}
+
+.pending_requests{
+
+}
+
+.button_holder{
+    float:left;
+    margin-top: 0.5em;
+    margin-left:1em ;
+}
+
 #new_contacts a{
     text-decoration: none;
     font-size: 0.9em;
     color:green;
 }
 
-#contacts_list li {
-    margin-bottom: 1em;
-    background-color: lightgray;
-    border-top-right-radius: 0.2em;
-    border-bottom-right-radius: 0.2em;
-    height: 2.1em;
+#contacts{
+    border-radius: 0.2em;
 }
 
-#contacts_list li:hover{
-    background-color: darkgray;
+#contacts li {
+    display: inline;
+    margin-right: 0.5em;
+}
+
+.contact_list{
+   margin-top:1em;
+   margin-left:1em;
+   margin-right:1em;
 }
 
 .contact_img {
@@ -115,11 +138,13 @@
     border-radius: 0.2em;
 }
 
-#contacts_list a{
-    margin-left: 1em;
+#contacts li{
     text-decoration: none;
     color:#000000;
-    width: 3em;
     line-height: 2em;
+}
+
+.inline_block{
+    display: inline-block;
 }
 /*Fim de Template*/

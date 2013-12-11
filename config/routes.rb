@@ -1,5 +1,7 @@
 LetsGetPro::Application.routes.draw do
 
+  resources :friendships
+
   resources :jobshistories
 
   resources :curriculums

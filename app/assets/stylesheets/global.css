@@ -454,7 +454,7 @@ table {
 /* END RESET */
 
 body{
-    font-family: Helvetica, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .underline {
@@ -606,7 +606,7 @@ body{
     background-color: #b9b8b4;
     margin-top: 4.5em;
     padding-top: 0.5em;
-    height:2em;
+    height:2.5em;
 }
 
 #nav_bar li{
