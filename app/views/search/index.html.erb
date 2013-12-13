@@ -1,0 +1,45 @@
+
+
+
+
+<div id="search_title">
+  <h2>Search Results</h2>
+</div>
+<div id="search_results">
+  <div class="result_type">
+    <div class="title">
+      <p class="bar_title title_background">Contacts Found</p>
+    </div>
+    <div class="results">
+      <div class="current_contacts">
+        <% @sUsers.each do |user| %>
+            <li><div class="contact_box">
+              <img class="contact_img" src="<%= asset_path(user.img_url)%>"/>
+              <%= user.name %>
+            </div>
+            </li>
+        <% end %>
+      </div>
+    </div>
+    <div class="title">
+      <p class="bar_title title_background">Companies Found</p>
+    </div>
+    <div class="results">
+      <div class="current_contacts">
+        <ul class="contacts_list">
+          <li>
+            <img class="contact_img" src="../img/microsoft-logo-icon.png">
+            <a class="contact_text">Microsoft</a>
+          </li>
+          <li>
+            <img class="contact_img" src="../img/apple-icon.gif">
+            <a class="contact_text">Apple</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="search_footer">
+
+</div>

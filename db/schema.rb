@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131211122737) do
+ActiveRecord::Schema.define(version: 20131213130237) do
 
   create_table "companies", force: true do |t|
     t.string   "name"
@@ -20,6 +20,11 @@ ActiveRecord::Schema.define(version: 20131211122737) do
     t.string   "acronym"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "tel"
+    t.string   "website"
+    t.string   "img_url"
+    t.integer  "owner_id"
+    t.string   "description"
   end
 
   create_table "curriculums", force: true do |t|
@@ -72,6 +77,8 @@ ActiveRecord::Schema.define(version: 20131211122737) do
     t.string   "remember_token"
     t.string   "workplace"
     t.string   "img_url"
+    t.integer  "company_id"
+    t.string   "position"
   end
 
   add_index "users", ["remember_token"], name: "index_users_on_remember_token"

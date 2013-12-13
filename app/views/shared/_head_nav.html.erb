@@ -19,8 +19,12 @@
   </div>
 
   <div id="search">
-    <input id="input_search" type="search"  name="search_gopro">
-    <button id="button_search" onclick="searchResultsFromIndex()" type="button">Search</button>
+    <%= form_tag search_index_path, :method => "get",class:'search_form' do %>
+         <p class="col-lg-9">
+            <%= text_field_tag :searchbar, params[:search], class:'form-control input-large' %>
+         </p>
+        <%= submit_tag "Search", :name => nil, class: 'btn btn-normal btn-custom' %>
+    <% end %>
   </div>
 </div>
 
@@ -29,7 +33,13 @@
     <li><%= link_to "Home", root_url %></li>
     <li><%= link_to "My Profile", profile_path(current_user.to_param) %></li>
     <li><%= link_to "Contacts", users_path %></li>
-    <li><a href="./html/company.html" class="clickable_nav">Company Profile</a></li>
+    <li>
+      <% if !@current_user.company_id.nil? %>
+      <%= link_to "Company Profile", company_path(@current_user.company_id) %>
+      <% else %>
+      <%= link_to "Company Profile", new_company_path %>
+      <% end %>
+    </li>
     <li> <a href="./html/about.html" class="clickable_nav">About Us</a></li>
   </ul>
 </div>

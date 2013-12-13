@@ -23,19 +23,19 @@
     margin-top: 1em;
 }
 
-#company_name {
+#company_title {
     font-size: 2em;
     margin-left: 1em;
 }
 
-#company_location {
+#company_location_text {
     color: gray;
     font-size: 1.5em;
     margin-left: 1.5em;
 }
 
 #company_information {
-    float: left;
+    clear:both;
     margin: 0.5em;
     border: 1px solid;
     border-color: lightgray;
@@ -110,4 +110,8 @@
     margin-top: 1em;
     pading: 0.5em;
     width: 100%
+}
+
+.strokeborder{
+    background-color: #f6f6f6;
 }

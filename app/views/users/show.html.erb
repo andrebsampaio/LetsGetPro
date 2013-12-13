@@ -67,6 +67,9 @@
           </div>
           </li>
       <% end %>
+      <div class="apple_pagination">
+        <%= will_paginate @friendships, :page_links => true %>
+      </div>
       <% for user in @user.inverse_friends %>
           <li><div class="contact_box">
             <img class="contact_img" src="<%= asset_path(user.img_url)%>"/>

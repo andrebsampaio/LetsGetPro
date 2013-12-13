@@ -1,6 +1,9 @@
 LetsGetPro::Application.routes.draw do
 
+
   resources :friendships
+
+  resources :search
 
   resources :jobshistories
 
@@ -13,6 +16,8 @@ LetsGetPro::Application.routes.draw do
   resources :users
 
   resources :sessions, only: [:new, :create, :destroy]
+
+  get "index/index"
 
   match '/signup',  to: 'users#new',            via: 'get'
   match '/signin',  to: 'sessions#new',         via: 'get'

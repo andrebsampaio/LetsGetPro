@@ -25,9 +25,11 @@ class CompaniesController < ApplicationController
   # POST /companies.json
   def create
     @company = Company.new(company_params)
+    @company.owner_id = current_user.id
 
     respond_to do |format|
       if @company.save
+        current_user.update_attribute(:company_id, @company.id)
         format.html { redirect_to @company, notice: 'Company was successfully created.' }
         format.json { render action: 'show', status: :created, location: @company }
       else
@@ -69,6 +71,6 @@ class CompaniesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def company_params
-      params.require(:company).permit(:name, :location, :join_date, :acronym)
+      params.require(:company).permit(:name, :location, :join_date, :acronym, :tel, :website, :img_url,:description)
     end
 end

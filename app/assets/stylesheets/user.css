@@ -48,9 +48,7 @@
 }
 
 #contacts {
-    margin-right: 1em;
-    margin-left: 1em;
-    margin-bottom: 1em;
+    margin:1em;
     border: 1px solid lightgray;
 }
 
@@ -58,6 +56,10 @@
     border: 1px solid lightgray;
     display: inline-block;
     padding: 0.5em;
+}
+
+.floatleft{
+    float:left;
 }
 
 .curriculum_author_title{

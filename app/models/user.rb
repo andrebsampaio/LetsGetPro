@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   has_one :curriculum
   has_many :jobshistory, through: :curriculum
   has_many :friendships
+  belongs_to :company, :class_name => 'Company', :foreign_key => "company_id"
   has_many :friends, :through => :friendships
   has_many :inverse_friendships, :class_name => "Friendship", :foreign_key => "friend_id"
   has_many :inverse_friends, :through => :inverse_friendships, :source => :user

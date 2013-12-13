@@ -43,7 +43,7 @@ class CurriculumsController < ApplicationController
   def update
     respond_to do |format|
       if @curriculum.update(curriculum_params)
-        format.html { redirect_to @curriculum, notice: 'Curriculum was successfully updated.' }
+        format.html { redirect_to current_user, notice: 'Curriculum was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

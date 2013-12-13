@@ -1,24 +1,56 @@
-<p id="notice"><%= notice %></p>
+<div id="company_info">
+  <img id="company_pic" src="<%= asset_path(@company.img_url)%>">
+  <div id="company_name_location">
+    <p id="company_title" class="bold"><%= @company.name %></p>
+    <p id="company_location_text"><%= @company.location %></p>
+  </div>
+</div>
+<div id="company_information">
+  <div id="title">
+    <p class="bold">Information</p>
+  </div>
+  <div id="information">
+    <iframe id="company_map" width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.pt/maps?ie=UTF8&amp;q=<%= @company.location %>&amp;gl=pt&amp;hq=<%= @company.location %>;radius=15000&amp;output=embed"></iframe>
+    <br>
+    <small><a href="https://maps.google.pt/maps?ie=UTF8&amp;q=<%= @company.location %>&amp;gl=pt&amp;hq=<%= @company.location %>" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+    <p id="company_text" class="justified"><%= @company.description %></p>
+    <br>
+    <p class="bold">Contacts:</p>
+    <p><span class="bold">Telephone: </span> <%= @company.tel %></p>
+    <span class="bold">Website: </span><%= link_to @company.name, "http://" + @company.website%>
+  </div>
+</div>
+<div id="contacts">
 
-<p>
-  <strong>Name:</strong>
-  <%= @company.name %>
-</p>
+  <div class="contact_notices">
+    <h1 class="h1 inline_block vcenter">Employees</h1>
+  </div>
+  <div class="contact_list">
+    <ul>
+      <% @company.user.each do |user| %>
+          <% if user.id == @company.owner_id%>
 
-<p>
-  <strong>Location:</strong>
-  <%= @company.location %>
-</p>
+              <li><div class="contact_box strokeborder">
+                <img class="contact_img" src="<%= asset_path(user.img_url)%>"/>
+                <div class="floatleft">
+                  <%= user.name %><br>
+                  <span class="gray italic">Owner</span>
+                </div>
 
-<p>
-  <strong>Join date:</strong>
-  <%= @company.join_date %>
-</p>
+              </div>
 
-<p>
-  <strong>Acronym:</strong>
-  <%= @company.acronym %>
-</p>
+          <% else%>
+              <li><div class="contact_box">
+                <img class="contact_img" src="<%= asset_path(user.img_url)%>"/>
+                <div class="floatleft">
+                  <%= link_to user.name, user_path(user) %><br>
+                  <span class="gray italic"><%= user.position %></span>
+                </div>
 
-<%= link_to 'Edit', edit_company_path(@company) %> |
-<%= link_to 'Back', companies_path %>
+              </div>
+              </li>
+          <% end%>
+      <% end %>
+    </ul>
+  </div>
+</div>

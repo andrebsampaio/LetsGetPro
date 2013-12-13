@@ -12,7 +12,6 @@
       </ul>
     </div>
   <% end %>
-
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
@@ -31,6 +30,10 @@
   <div class="field">
     <%= f.label :password_confirmation %><br>
     <%= f.password_field :password_confirmation %>
+  </div>
+  <div class="field">
+    <%= f.label :company %>
+    <%= f.select :id, Company.all.collect {|e| [e.id, e.name]} %>
   </div>
   <div class="actions">
     <%= f.submit "Signup", class: "btn btn-large btn-custom" %>

@@ -1,6 +1,7 @@
 <div id ="publish_new">
   <%= link_to 'Click me if you have news to publish', new_post_path  %>
 </div>
+
 <% @posts.reverse_each do |post| %>
     <div class="news_block">
       <div class="news_title">
@@ -32,3 +33,6 @@
       </div>
     </div>
 <% end %>
+<div class="apple_pagination">
+<%= will_paginate @posts, :page_links => true %>
+</div>

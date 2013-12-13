@@ -29,8 +29,8 @@ class JobshistoriesController < ApplicationController
 
     respond_to do |format|
       if @jobshistory.save
-        format.html { redirect_to @jobshistory, notice: 'Jobshistory was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @jobshistory }
+        format.html { redirect_to current_user, notice: 'Job history was successfully created.' }
+        format.json { render action: 'show', status: :created, location: current_user }
       else
         format.html { render action: 'new' }
         format.json { render json: @jobshistory.errors, status: :unprocessable_entity }
@@ -43,7 +43,7 @@ class JobshistoriesController < ApplicationController
   def update
     respond_to do |format|
       if @jobshistory.update(jobshistory_params)
-        format.html { redirect_to @jobshistory, notice: 'Jobshistory was successfully updated.' }
+        format.html { redirect_to current_user, notice: 'Job History was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

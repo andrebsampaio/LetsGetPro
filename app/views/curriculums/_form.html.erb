@@ -1,3 +1,4 @@
+<div class="form_holder">
 <%= form_for(@curriculum) do |f| %>
   <% if @curriculum.errors.any? %>
     <div id="error_explanation">
@@ -13,25 +14,26 @@
 
   <div class="field">
     <%= f.label :description %><br>
-    <%= f.text_field :description %>
+    <%= f.text_area :description, class:'form-control' %>
   </div>
   <div class="field">
     <%= f.label :contact %><br>
-    <%= f.text_field :contact %>
+    <%= f.text_field :contact, class:'form-control' %>
   </div>
   <div class="field">
     <%= f.label :age %><br>
-    <%= f.number_field :age %>
+    <%= f.number_field :age, class:'form-control' %>
   </div>
   <div class="field">
-    <%= f.label :education %><br>
-    <%= f.text_field :education %>
+    <%= f.label "Education" %><br>
+    <%= f.text_field :education, class:'form-control' %>
   </div>
   <div class="field">
-    <%= f.label :misc %><br>
-    <%= f.text_field :misc %>
+    <%= f.label "Other information" %><br>
+    <%= f.text_field :misc, class:'form-control' %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="actions centered">
+    <%= f.submit "Submit Changes", class: "btn btn-large btn-custom"  %>
   </div>
 <% end %>
+</div>

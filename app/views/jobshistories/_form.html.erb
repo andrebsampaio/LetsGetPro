@@ -1,3 +1,4 @@
+<div class="form_holder">
 <%= form_for(@jobshistory) do |f| %>
   <% if @jobshistory.errors.any? %>
     <div id="error_explanation">
@@ -13,25 +14,26 @@
 
   <div class="field">
     <%= f.label :start %><br>
-    <%= f.number_field :start %>
+    <%= f.number_field :start, class:'form-control' %>
   </div>
   <div class="field">
     <%= f.label :end %><br>
-    <%= f.number_field :end %>
+    <%= f.number_field :end, class:'form-control' %>
   </div>
   <div class="field">
     <%= f.label :company %><br>
-    <%= f.text_field :company %>
+    <%= f.text_field :company, class:'form-control' %>
   </div>
   <div class="field">
     <%= f.label :location %><br>
-    <%= f.text_field :location %>
+    <%= f.text_field :location, class:'form-control' %>
   </div>
   <div class="field">
     <%= f.label :job %><br>
-    <%= f.text_field :job %>
+    <%= f.text_field :job, class:'form-control' %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="actions centered">
+    <%= f.submit "Submit Changes", class: 'btn btn-custom' %>
   </div>
 <% end %>
+</div>

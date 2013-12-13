@@ -363,7 +363,7 @@ input[type="search"] {
 }
 
 /**
- * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * Remove inner padding and index cancel button in Safari 5 and Chrome
  * on OS X.
  */
 
@@ -582,13 +582,14 @@ body{
 
 }
 
-#input_search{
-    min-width: 30%;
-    max-width: 50%;
-    width: 50%;
-    margin-top: 1.4em;
-
+.search_form{
+    margin-top: 1em;
 }
+
+.col-lg-9{
+    padding-right: 0 !important;
+}
+
 
 #button_search{
     width: 4em;
