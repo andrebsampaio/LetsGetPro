@@ -1,5 +1,13 @@
 <div id="company_info">
-  <img id="company_pic" src="<%= asset_path(@company.img_url)%>">
+  <img id="company_pic" src="
+  <% if @company.img_url.nil?%>
+   <%= asset_path('company.png') %>
+  <% elsif Rails.application.assets.find_asset @company.img_url  %>
+           <%= asset_path(@company.img_url) %>
+  <% else  %>
+    <%= @company.img_url%>
+  <% end %>
+  "/>
   <div id="company_name_location">
     <p id="company_title" class="bold"><%= @company.name %></p>
     <p id="company_location_text"><%= @company.location %></p>

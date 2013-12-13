@@ -5,23 +5,17 @@
     <h3 class="bar_title">My Connections</h3>
   </div>
   <hr>
-  <span class="social_title">COMPANIES</span>
+  <span class="social_title">My Company</span>
   <ul class="social_menu focusListElem">
+    <li><%= link_to current_user.company.name, company_path(current_user.company_id) %></li>
+  </ul>
+  <span class="social_title">NEW COMPANIES</span>
+  <ul class="social_menu focusListElem">
+    <% Company.all.first(10).each do |company| %>
     <li>
-      <a href="#" >YOMama</a>
+      <%= link_to company.name, company_path(company.id) %>
     </li>
-    <li>
-      <a href="#">Apple</a>
-    </li>
-    <li>
-      <a href="#">Google</a>
-    </li>
-    <li>
-      <a href="#">Samsung</a>
-    </li>
-    <li>
-      <a href="#">Txaina</a>
-    </li>
+    <% end %>
   </ul>
   <span class="social_title">Groups</span>
   <ul class="social_menu focusListElem">
@@ -39,25 +33,6 @@
     </li>
     <li>
       <a href="#">Bieber Fans</a>
-    </li>
-  </ul>
-  <span class="social_title">My Companies</span>
-  <ul class="social_menu focusListElem">
-
-    <li>
-      <a href="#">Bieber Industries</a>
-    </li>
-    <li>
-      <a href="#">Myer Nail Polish Enterprise</a>
-    </li>
-    <li>
-      <a href="#">Jonh's Lemonade Stand</a>
-    </li>
-    <li>
-      <a href="#">Killer Bees Farm</a>
-    </li>
-    <li>
-      <a href="#">Apple Ripoff Products Limited</a>
     </li>
   </ul>
 </div><!-- END LEFT SIDE-->

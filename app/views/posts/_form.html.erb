@@ -13,11 +13,15 @@
 
   <div class="field">
     <%= f.label :title, class: 'post_label'%>
-    <%= f.text_field :title, class: 'post_title' %>
+    <%= f.text_field :title, class: 'post_title form-control' %>
+  </div>
+  <div class="field">
+    <%= f.label "Image Url", class: 'post_label'%>
+    <%= f.text_field :img_url, class: 'post_title form-control' %>
   </div>
   <div class="field">
     <%= f.label :content, class: 'post_label' %>
-    <%= f.text_area :content, class: 'text_content' %>
+    <%= f.text_area :content, class: 'text_content form-control' %>
   </div>
   <div class="actions">
     <%= f.submit id: "submit_post" , class: "btn btn-custom" %>

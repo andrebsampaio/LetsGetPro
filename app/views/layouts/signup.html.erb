@@ -45,12 +45,17 @@
           <%= f.label "Image Url" %><br>
           <%= f.text_field :img_url , class:'form-control'%>
         </div>
+        <span>Or</span>
+        <div class="field">
+          <%= f.label "Upload File" %><br>
+          <%= f.file_field :img_url , class:'form-control'%>
+        </div>
         <div class="field">
           <%= f.label :company %><br>
-          <%= f.collection_select  :id, Company.all, :id, :name, {prompt: "Select a Company"}, {class: "form-control"}  %>
+          <%= f.collection_select  :company_id, Company.all, :id, :name, {prompt: "Select a Company"}, {class: "form-control"}  %>
         </div>
-        <p>Or Start a New Comapany</p>
-        <%= link_to "Create New Company", new_company_path, class:'btn btn-custom'%>
+
+
         <div class="actions">
           <br>
           <%= f.submit "Signup", class: "btn btn-large btn-custom" %>

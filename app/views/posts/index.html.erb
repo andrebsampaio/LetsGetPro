@@ -2,7 +2,7 @@
   <%= link_to 'Click me if you have news to publish', new_post_path  %>
 </div>
 
-<% @posts.reverse_each do |post| %>
+<% @posts.each do |post| %>
     <div class="news_block">
       <div class="news_title">
         <h2><%= post.title %></h2>
@@ -17,8 +17,19 @@
           <p><span class="user_title">Post Date: </span><span class="user_detail"><%= post.created_at %></span></p>
         </div>
 
+
       </div>
       <div class="news_content">
+        <div class="post_image_holder">
+          <img class="post_image" src="
+          <%if !post.img_url.nil?%>
+          <%= post.img_url%>
+          <%else%>
+          <%= asset_path('icon-news.png')%>
+          <%end%>
+          "/>
+
+        </div>
         <%= post.content %>
       </div>
       <div class="news_footer">

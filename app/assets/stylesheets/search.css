@@ -12,6 +12,7 @@
     float:left;
     margin-left: 1em;
     margin-top: 1em;
+    margin-right: 1em;
 }
 
 
@@ -62,5 +63,9 @@
 
 .result_type{
     clear:both;
+}
+
+.found_contacts{
+    margin-bottom: 1em;
 }
 

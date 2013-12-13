@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.all
-    @posts = @posts.paginate(:page => params[:page], :per_page => 5)
+    @posts = @posts.paginate(:page => params[:page], :per_page => 5,:order => 'created_at DESC')
   end
 
   # GET /posts/1
@@ -72,6 +72,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :content, :shares, :user_id )
+      params.require(:post).permit(:title, :content, :shares, :user_id,:img_url )
     end
 end

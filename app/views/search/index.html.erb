@@ -11,14 +11,19 @@
       <p class="bar_title title_background">Contacts Found</p>
     </div>
     <div class="results">
-      <div class="current_contacts">
+      <div class="found_contacts">
+        <ul>
         <% @sUsers.each do |user| %>
             <li><div class="contact_box">
               <img class="contact_img" src="<%= asset_path(user.img_url)%>"/>
-              <%= user.name %>
+              <%= link_to user.name, user_path(user) %>
+               <% if !current_user.friends.exists?(user)%>
+              (<%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post%>)
+              <% end %>
             </div>
             </li>
         <% end %>
+        </ul>
       </div>
     </div>
     <div class="title">
@@ -27,14 +32,13 @@
     <div class="results">
       <div class="current_contacts">
         <ul class="contacts_list">
-          <li>
-            <img class="contact_img" src="../img/microsoft-logo-icon.png">
-            <a class="contact_text">Microsoft</a>
-          </li>
-          <li>
-            <img class="contact_img" src="../img/apple-icon.gif">
-            <a class="contact_text">Apple</a>
-          </li>
+          <% @sCompanies.each do |company| %>
+              <li><div class="contact_box">
+                <img class="contact_img" src="<%= asset_path(company.img_url)%>"/>
+                <%= company.name %>
+              </div>
+              </li>
+          <% end %>
         </ul>
       </div>
     </div>
